@@ -7,3 +7,6 @@ php:
 build:
   pre_ci:
     - echo The PHP version is $SHIPPABLE_PHP_VERSION
+  pre_ci_boot:
+   image_name: ragesh/foo
+   image_tag: v$SHIPPABLE_PHP_VERSION
