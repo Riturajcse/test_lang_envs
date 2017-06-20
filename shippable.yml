@@ -2,10 +2,10 @@ language: ruby
 
 build:
   pre_ci:
-    - echo The ruby version is $SHIPPABLE_RUBY_VERSION
-    - docker tag drydock/u16ruball:master drydock/u16ruball:v$SHIPPABLE_RUBY_VERSION
+    - echo The ruby version is $SHIPPABLE_RUBY
+    - docker tag drydock/u16ruball:master drydock/u16ruball:v$SHIPPABLE_RUBY
   pre_ci_boot:
     image_name: drydock/u16ruball
-    image_tag: v$SHIPPABLE_RUBY_VERSION
+    image_tag: v$SHIPPABLE_RUBY
   ci:
-    - echo The ruby version is $SHIPPABLE_RUBY_VERSION
+    - echo The ruby version is $SHIPPABLE_RUBY
