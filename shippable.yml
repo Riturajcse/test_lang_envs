@@ -7,3 +7,5 @@ build:
   pre_ci_boot:
     image_name: drydock/u16cloall
     image_tag: v$SHIPPABLE_LEIN_VERSION
+  ci:
+    - echo lein version in $SHIPPABLE_LEIN_VERSION
