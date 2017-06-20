@@ -1,5 +1,11 @@
-language: none
+language: node_js
 
 build:
   pre_ci:
-    - echo Hello, World!
+    - echo The node version is $SHIPPABLE_NODE_VERSION
+    - docker tag drydock/u16nodall:master drydock/u16nodall:v$SHIPPABLE_NODE_VERSION
+  pre_ci_boot:
+    image_name: drydock/u16nodall
+    image_tag: v$SHIPPABLE_NODE_VERSION
+  ci:
+    - echo The node version is $SHIPPABLE_NODE_VERSION
