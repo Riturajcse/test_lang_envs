@@ -1,5 +1,11 @@
-language: none
+language: java
 
 build:
   pre_ci:
-    - echo Hello, World!
+    - echo The java version is $SHIPPABLE_JDK_VERSION
+    - docker tag drydock/u16javall:master drydock/u16javall:v$SHIPPABLE_JDK_VERSION
+  pre_ci_boot:
+    image_name: drydock/u16javall
+    image_tag: v$SHIPPABLE_JDK_VERSION
+  ci:
+    - echo The java version is $SHIPPABLE_JDK_VERSION
