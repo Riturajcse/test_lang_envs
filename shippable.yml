@@ -1,5 +1,8 @@
-language: none
+language: clojure
 
 build:
   pre_ci:
-    - echo Hello, World!
+    - echo lein version is $SHIPPABLE_LEIN_VERSION
+  pre_ci_boot:
+    image_name: ragesh/foo
+    image_tag: nonexistent
