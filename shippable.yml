@@ -1,5 +1,11 @@
-language: none
+language: scala
 
 build:
   pre_ci:
-    - echo Hello, World!
+    - echo The scala version is $SHIPPABLE_SCALA_VERSION
+    - docker tag drydock/u16scaall:master drydock/u16scaall:v$SHIPPABLE_SCALA_VERSION
+  pre_ci_boot:
+    image_name: drydock/u16scaall
+    image_tag: v$SHIPPABLE_SCALA_VERSION
+  ci:
+    - echo The scala version is $SHIPPABLE_SCALA_VERSION
