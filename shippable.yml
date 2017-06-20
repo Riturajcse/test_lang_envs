@@ -1,5 +1,11 @@
-language: none
+language: python
 
 build:
   pre_ci:
-    - echo Hello, World!
+    - echo The python version is $SHIPPABLE_PYTHON_VERSION
+    - docker tag drydock/u16pytall:master drydock/u16pytall:v$SHIPPABLE_PYTHON_VERSION
+  pre_ci_boot:
+    image_name: drydock/u16pytall
+    image_tag: v$SHIPPABLE_PYTHON_VERSION
+  ci:
+    - echo The python version is $SHIPPABLE_PYTHON_VERSION
