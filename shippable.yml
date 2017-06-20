@@ -3,6 +3,7 @@ language: clojure
 build:
   pre_ci:
     - echo lein version is $SHIPPABLE_LEIN_VERSION
+    - docker tag drydock/u16cloall:master drydock/u16cloall:v$SHIPPABLE_LEIN_VERSION
   pre_ci_boot:
-    image_name: drydock/u16phpall
-    image_tag: master
+    image_name: drydock/u16cloall
+    image_tag: v$SHIPPABLE_LEIN_VERSION
