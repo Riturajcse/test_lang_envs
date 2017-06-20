@@ -4,5 +4,5 @@ build:
   pre_ci:
     - echo lein version is $SHIPPABLE_LEIN_VERSION
   pre_ci_boot:
-    image_name: ragesh/foo
-    image_tag: nonexistent
+    image_name: drydock/u16phpall
+    image_tag: master
