@@ -2,7 +2,7 @@ language: php
 
 php:
  - "7.0"
- - "7.l"
+ - "7.1"
 
 build:
   pre_ci:
