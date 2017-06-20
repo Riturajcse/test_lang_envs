@@ -1,5 +1,9 @@
-language: none
+language: php
+
+php:
+ - "7.0"
+ - "7.l"
 
 build:
   pre_ci:
-    - echo Hello, World!
+    - echo The PHP version is $SHIPPABLE_PHP_VERSION
