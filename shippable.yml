@@ -7,9 +7,10 @@ php:
 build:
   pre_ci:
     - echo The PHP version is $SHIPPABLE_PHP_VERSION
+    - docker tag drydock/u16phpall:master ragesh/php:v$SHIPPABLE_PHP_VERSION
   pre_ci_boot:
-   image_name: drydock/u16phpall
-   image_tag: master
+   image_name: ragesh/php
+   image_tag: v$SHIPPABLE_PHP_VERSION
    pull: false
   ci:
     - echo The PHP version is $SHIPPABLE_PHP_VERSION
