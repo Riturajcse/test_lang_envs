@@ -10,23 +10,21 @@ rvm:
   - 2.1.4
   - 2.1.5
   - 2.2.0
-  - 2.2.1 
+  - 2.2.1
   - 2.2.5
   - 2.3.0
   - 2.3.1
   - 2.3.2
   - 2.3.3
-  - jruby-9.1.2
-  - jruby-9.1.5
-  - ree-1.8.7
   - jruby-1.7.19
-  - jruby-9.0.0
+  - jruby-9.0.0 
+  - ree
 build:
   pre_ci:
     - echo The ruby version is $SHIPPABLE_RUBY
-    - docker tag drydock/u16ruball:master drydock/u16ruball:v$SHIPPABLE_RUBY
+    - docker tag drydock/u14ruball:master drydock/u14ruball:v$SHIPPABLE_RUBY
   pre_ci_boot:
-    image_name: drydock/u16ruball
+    image_name: drydock/u14ruball
     image_tag: v$SHIPPABLE_RUBY
   ci:
     - echo The ruby version is $SHIPPABLE_RUBY
