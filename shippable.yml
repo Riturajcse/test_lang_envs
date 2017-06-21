@@ -21,9 +21,9 @@ node_js:
 build:
   pre_ci:
     - echo The node version is $SHIPPABLE_NODE_VERSION
-    - docker tag drydock/u16nodall:master drydock/u16nodall:v$SHIPPABLE_NODE_VERSION
+    - docker tag drydock/u14nodall:master drydock/u14nodall:v$SHIPPABLE_NODE_VERSION
   pre_ci_boot:
-    image_name: drydock/u16nodall
+    image_name: drydock/u14nodall
     image_tag: v$SHIPPABLE_NODE_VERSION
   ci:
     - echo The node version is $SHIPPABLE_NODE_VERSION
