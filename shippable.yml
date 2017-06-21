@@ -1,11 +1,21 @@
 language: python
-
+python:
+  - 2.6
+  - 2.7
+  - 3.2
+  - 3.3
+  - 3.4
+  - 3.5
+  - 3.6
+  - pypy
+  - pypy3 
+  
 build:
   pre_ci:
     - echo The python version is $SHIPPABLE_PYTHON_VERSION
-    - docker tag drydock/u16pytall:master drydock/u16pytall:v$SHIPPABLE_PYTHON_VERSION
+    - docker tag drydock/u14pytall:master drydock/u16pytall:v$SHIPPABLE_PYTHON_VERSION
   pre_ci_boot:
-    image_name: drydock/u16pytall
+    image_name: drydock/u14pytall
     image_tag: v$SHIPPABLE_PYTHON_VERSION
   ci:
     - echo The python version is $SHIPPABLE_PYTHON_VERSION
