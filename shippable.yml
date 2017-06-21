@@ -1,11 +1,22 @@
 language: scala
+scala:
+    - 2.11.0
+    - 2.9.3
+    - 2.10.5
+    - 2.11.6
+    - 2.10.6
+    - 2.11.8
+jdk: 
+  - openjdk7
+  - oraclejdk7
+  - oraclejdk8    
 
 build:
   pre_ci:
     - echo The scala version is $SHIPPABLE_SCALA_VERSION
-    - docker tag drydock/u16scaall:master drydock/u16scaall:v$SHIPPABLE_SCALA_VERSION
+    - docker tag drydock/u14scaall:master drydock/u14scaall:v$SHIPPABLE_SCALA_VERSION
   pre_ci_boot:
-    image_name: drydock/u16scaall
+    image_name: drydock/u14scaall
     image_tag: v$SHIPPABLE_SCALA_VERSION
   ci:
     - echo The scala version is $SHIPPABLE_SCALA_VERSION
